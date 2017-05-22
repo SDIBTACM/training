@@ -87,6 +87,8 @@ int main()
     return 0;
 }
 ```
+>myset contains: 10 30 50
+
 ### swap 
 交换集合内两个元素的位置 <br/>
 
@@ -119,6 +121,7 @@ main()
     return 0;
 }
 ```
+>first contains: 20 25 32<br/>second contains: 10 12 75
 ### clear
 清空某个集和的所有内容<br/>
 
@@ -155,5 +158,6 @@ int main()
     return 0;
 }
 ```
+>myset contains: 100 200 300<br/>myset contains: 1101 2202
 
 ## STL通用的函数不在一一列举
