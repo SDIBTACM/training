@@ -12,7 +12,7 @@ insert 插入<br/> erase 删除<br/> swap 交换<br/> clear 清空容器 <br/>
 >(1)pair<iterator,bool> insert (const value_type& val);<br/> (2)iterator insert (iterator position, const value_type& val);<br> (3) template <class InputIterator>
   void insert (InputIterator first, InputIterator last);<br/>
 
-```
+```cpp
 // set::insert (C++98)
 #include <iostream>
 #include <set>
