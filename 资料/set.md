@@ -55,7 +55,7 @@ int main()
 参数类型
 >(1)void erase (iterator position);<br/>(2)size_type erase (const value_type& val);<br/>(3)void erase (iterator first, iterator last);<br/>
 
-```
+```cpp
 // erasing from set
 #include <iostream>
 #include <set>
@@ -95,7 +95,7 @@ int main()
 参数类型
 >void swap（set＆x）;
 
-```
+```cpp
 // swap sets
 #include <iostream>
 #include <set>
@@ -128,7 +128,7 @@ main()
 参数类型
 >void clear();
 
-```
+```cpp
 // set::clear
 #include <iostream>
 #include <set>
