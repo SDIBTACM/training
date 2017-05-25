@@ -16,13 +16,11 @@
 /**啦啦啦*/
 #include <stdio.h>
 int main(void){
-    printf("Hello,Acmers!")
+    printf("Hello,Acmers!");
     return 0;
 }
 ```
 
-
-*不知道上面的代码能否有个好看的配色*
 
 
 ## 第一周周报
