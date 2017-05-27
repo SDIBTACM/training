@@ -1,4 +1,4 @@
-学习了一些c++的知识，upper_bound()与lower_bound()，cin输入缓冲区的一些函数，string,发了一堆博客。
+学习了一些c++的知识，upper_bound()与lower_bound()，cin输入缓冲区的一些函数，了解了一下string,发了一堆博客。
 今天周六，明天有时间应该会再学一些vector的知识。
 然后下周继续补题，或许又会发现一些有用的新知识。
 cin.get(ch,10,'x');或许有dalao看到我的周记，又明白这个函数的，一定来帮我解惑啊，是不是括号里三个变量的get和getline一样（如果结束标志不是\n的话）
