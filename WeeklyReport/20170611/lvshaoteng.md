@@ -24,5 +24,4 @@ String regex1="\\w{3,6}"; //限制数字字母
           
         String regex4="\\d{3,6}";  //限制数字
         boolean flag4=jtf4.getText().matches(regex4);  
-===========
 
