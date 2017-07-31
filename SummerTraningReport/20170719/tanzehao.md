@@ -1,4 +1,4 @@
-##栈和队列 <br>
+##栈和队列
 ```cpp
 queue <> q;
 stack <> s;
@@ -12,7 +12,7 @@ priority_queue <> pri_q;
 但还是不够<br>
 stack 和 queue 感觉还是和其他算法一起用的时候比较多<br>
 <br><br>
-##贪心算法<br>
+##贪心算法
 ```cpp
 sort();
 ```
