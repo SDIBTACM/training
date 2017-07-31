@@ -10,8 +10,8 @@ priority_queue <> pri_q;
 之前学的运算符重载终于有用处了<br>
 对于维护一个优先队列，比之前有有了长足的进步<br>
 但还是不够<br>
-stack 和 queue 感觉还是和其他算法一起用的时候比较多<br>
-<br><br>
+stack 和 queue 感觉还是和其他算法一起用的时候比较多<br><br><br>
+
 ## 贪心算法
 ```cpp
 sort();
