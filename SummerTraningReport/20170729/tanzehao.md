@@ -2,7 +2,7 @@
 ```cpp
 int GCD(int a, int b)
 {
-	return b ? GCD(b, a%b): a;
+    return b ? GCD(b, a%b): a;
 }
 ```
 <br>
@@ -15,24 +15,24 @@ int GCD(int a, int b)
 ```cpp
 void Graham()
 {
-	int k = 0;
-	for(int i = 1; i < n; i++)
-		if(p[i].y < p[k].y || (p[i].y == p[k].y && p[i].x < p[k].x))
-			k = i;
+    int k = 0;
+    for(int i = 1; i < n; i++)
+        if(p[i].y < p[k].y || (p[i].y == p[k].y && p[i].x < p[k].x))
+            k = i;
 	
-	swap(p[k], p[0]);
-	sort(p+1, p+n, cmp);
-	s[0] = p[0];
-	s[1] = p[1];
-	top = 1;
+    swap(p[k], p[0]);
+    sort(p+1, p+n, cmp);
+    s[0] = p[0];
+    s[1] = p[1];
+    top = 1;
 
-	for(int i = 2; i < n; i++)
-	{
-		while(top >= 1 && chaji(s[top-1], s[top], p[i]) >= 0)
-			top--;
-		top++;
-		s[top] = p[i];
-	}
+    for(int i = 2; i < n; i++)
+    {
+        while(top >= 1 && chaji(s[top-1], s[top], p[i]) >= 0)
+            top--;
+        top++;
+        s[top] = p[i];
+    }
 }
 ```
 叉积与极角排序都是为凸包所服务的<br>
