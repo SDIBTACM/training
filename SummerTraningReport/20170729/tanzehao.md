@@ -15,12 +15,12 @@ int GCD(int a, int b)
 ```cpp
 void Graham()
 {
-    int k = 0;
-    for(int i = 1; i < n; i++)
-        if(p[i].y < p[k].y || (p[i].y == p[k].y && p[i].x < p[k].x))
+	int k = 0;
+	for(int i = 1; i < n; i++)
+		if(p[i].y < p[k].y || (p[i].y == p[k].y && p[i].x < p[k].x))
 			k = i;
 	
-    swap(p[k], p[0]);
+	swap(p[k], p[0]);
 	sort(p+1, p+n, cmp);
 	s[0] = p[0];
 	s[1] = p[1];
