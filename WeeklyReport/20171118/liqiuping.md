@@ -1,15 +1,3 @@
 自己会的东西实在是太少了,每天多花一点时间学算法.
 
-这周学了博弈,巴什,威佐夫,斐波那契懂了k
-
-
-
-
-*This text will be italic*
-_This will also be italic_
-
-**This text will be bold**
-__This will also be bold__
-
-_You **can** combine them_
-
+这周学了博弈,巴什,威佐夫,斐波那契已经懂了原理,而且在HDU上搜了一些题做,尼姆博弈,还有点不太理解,需要继续研究.
