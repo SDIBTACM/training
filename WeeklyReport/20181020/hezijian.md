@@ -7,3 +7,5 @@
 剩下的时间就先设计了 训练计划 的数据库表, 由于不是很有经验, 在 dalao 的帮助下前前后后弄了半天, 然后就开始写后端, 第一次从头开始写东西, 希望能又好又快的完成~~
 
 又有坑要填了Orz...
+
+PS. 本周 Ubuntu 18.10 正式推出, 关于新特性,以及如何升级, 欢迎查看 [从 Ubuntu 18.04 升级到 Ubuntu 18.10](https://boxjan.com/2018/10/update_ubuntu_from_18_04_to_18_10.html)![Ubuntu-18-10-simple](https://static.boxjan.com/wp-content/uploads/2018/10/ubuntu-18-10-simple.png) 
