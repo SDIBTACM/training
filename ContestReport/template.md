@@ -13,24 +13,20 @@ https://[hostname]/[path]
 #### A
 
 * 题意
-balablal~~  
+balabala~~
 
 * 思路
-balablal~~~  
-
-...
-
+balabala~~
 
 ### 补的题目
 
-#### B
+#### A
 
 * 题意
-balablal~~
+balabala~~
 
 * 思路
-balablal~~~
+balabala~~
 
-...
 
 
