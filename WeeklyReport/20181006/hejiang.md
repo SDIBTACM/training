@@ -21,5 +21,3 @@
 ## end
 
 <font size=21><center>**十万伏特，永无bug**</font>
-![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538821003&di=568f85b5464a725ce97defbc35c9fae8&imgtype=jpg&er=1&src=http://image.cnpp.cn/upload/images/20170322/1490176020_18855_3.jpg)
-
