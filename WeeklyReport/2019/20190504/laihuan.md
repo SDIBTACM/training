@@ -38,7 +38,8 @@ bool cmp(pair<int,int>a,pair<int,int>b) {
 
 - D
 因为这句话
->> The outputs of two consecutive cases will be separated by a blank line.
+> The outputs of two consecutive cases will be separated by a blank line.
+
 毫无征兆的WA了两发（罚时不要钱吗qaq
 虽然它是不确定组数的多组输入。可要求两组样例之间有换行，最后一组样例后无换行
 第一组正常输入输出 然后再while(～scanf())
