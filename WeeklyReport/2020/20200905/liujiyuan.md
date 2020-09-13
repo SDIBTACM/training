@@ -49,5 +49,54 @@ int main()
     }
     return 0;
 }
+#include <stdio.h>
+#include<algorithm>
+#include<iostream>
+using namespace std;
+struct node
+{
+    long long a;
+    long long b;
+}q[100001];
+bool cmp(node x,node y)
+{
+    return x.a<y.a?1:0;
+}
+int main()
+{
+    long long i,t,j,h,k,m=0,n,p=0,z;
+    scanf("%lld",&z);
+    for(i=1;i<=z;i++)
+    {
+        m=0;p=0;
+        scanf("%lld",&n);
+        for(j=1;j<=n;j++)
+        {
+            q[j].b=j;
+            scanf("%lld",&q[j].a);
+        }
+        sort(q+1,q+n+1,cmp);
+        for(j=1;j<n+1;j++)
+        {
+            if(q[j].b==0)
+                continue;
+            for(h=n;h>j;h--)
+            {
+                if(q[h].b==0)
+                    continue;
+                if(q[j].a!=q[h].a&&q[j].b<q[h].b)
+                {
+                    m+=q[h].a-q[j].a;
+                    p+=2;
+                    q[j].b=0;q[h].a=0;
+                    break;
+                }
+            }
+        }
+        printf("%lld %lld\n",m,p);
+
+    }
+    return 0;
+}
 
 
