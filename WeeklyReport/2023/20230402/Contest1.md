@@ -1,5 +1,52 @@
 # 20、21、22第一次个人赛(2023.04.02  14:00-18:00)
 
-[题解](http://acmgnyr.org/year2009/problems.shtml)
+## [题解](http://acmgnyr.org/year2009/problems.shtml)
 
-[比赛地址](https://vjudge.net/contest/550402)
+## [比赛地址](https://vjudge.net/contest/550402)
+
+## 比赛结果
+| Rank | Team                    | Score |
+| ---- | ----------------------- | ----- |
+|      |                         |       |
+| 1    | SDTBU_LCY(刘骋羽)       | 6     |
+| 2    | SDTBU_LY(廖银)          | 6     |
+| 3    | 2019214174({Cu1}...)    | 6     |
+| 4    | SDTBU_CWL(陈文龙)       | 5     |
+| 5    | SDTBU_LX(李旭)          | 5     |
+| 6    | SDU_TSK(响当当)         | 5     |
+| 7    | jk20214184(O泡果奶)     | 5     |
+| 8    | SDTBU_WCK(王成魁)       | 4     |
+| 9    | SDTBU_ZLK(康康不想秃头) | 4     |
+| 10   | jk21213389(李业昊)      | 4     |
+| 11   | SDTBU_SY(孙源)          | 4     |
+| 12   | SDTBU_LTY(刘统誉)       | 4     |
+| 13   | STU_YXY(杨新艺)         | 4     |
+| 14   | jk22214603(栗子旭)      | 4     |
+| 15   | SDTBU_MZW(孟孜文)       | 4     |
+| 16   | SDTBU_GYM(郭一鸣)       | 4     |
+| 17   | SDTBU_XJJ(谢俊杰)       | 4     |
+| 18   | SDTBU_TMQ(唐梦淇)       | 3     |
+| 19   | SDTBU_MBY(马宝运)       | 3     |
+| 20   | js2021230777(田佳璇)    | 3     |
+| 21   | SDTBU_TLH(仝令辉)       | 3     |
+| 22   | SDTBU_WZY(王在媛)       | 3     |
+| 23   | SDTBU_XYH               | 3     |
+| 24   | 13626422329(SDTBU_HS)   | 3     |
+| 25   | SDTBU_LQ(SDTBU-LQ)      | 3     |
+| 26   | SDTBU_ZRT(赵若彤)       | 3     |
+| 27   | SDTBU_xjw(肖俊伟)       | 3     |
+| 28   | Ishgrina                | 3     |
+| 29   | SDTBU_CJZ(成嘉泽)       | 3     |
+| 30   | jk22214600(赵潼)        | 3     |
+| 31   | SDTBU_LT(林涛)          | 3     |
+| 32   | SDTBU_wzw(王智炜)       | 3     |
+| 33   | jk22214598(祝增圆)      | 3     |
+| 34   | SDTBU_SYY(宋玥)         | 2     |
+| 35   | SDTBU_LYR               | 2     |
+| 36   | rg2021213527(王传瑞)    | 2     |
+| 37   | rj2022214683(赵丽萍)    | 2     |
+| 38   | wl22214941              | 1     |
+| 39   | wl222121943(付晓龙)     | 1     |
+| 40   | SDTBU_LSS(李双双)       | 1     |
+| 41   | sm2020234582(是真不会)  | 1     |
+| 42   | jk22214550(刘贵瑜)      | 1     |
