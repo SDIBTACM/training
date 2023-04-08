@@ -9,7 +9,7 @@
 
 **证明**:
 
-* 奇数行有$m$个小蜂巢,共有$\frac{n+1}{2}$个奇数行(当$n$为奇数时,有$ \left \lceil \frac{n}{2} \right \rceil$个奇数行,当$n$为偶数时,有$\frac{n}{2}$个奇数行,**综上**为$\frac{n+1}{2}$个奇数行);
+* 奇数行有$m$个小蜂巢,共有$\frac{n+1}{2}$个奇数行(当$n$为奇数时,有$\left \lceil \frac{n}{2} \right \rceil$个奇数行,当$n$为偶数时,有$\frac{n}{2}$个奇数行,**综上**为$\frac{n+1}{2}$个奇数行);
 * 偶数行有$m-1$个小蜂巢,共有$\frac{n}{2}$个偶数行(当$n$为奇数时,有$\left \lfloor \frac{n}{2} \right \rfloor$个偶数行,当$n$为偶数时,有$\frac{n}{2}$个偶数行,**综上**为$\frac{n}{2}$个偶数行(下取整$\left \lfloor \frac{a}{b} \right \rfloor$操作在执行时同$\frac{a}{b}$操作)).
 
 `组数cnt'`为:由于每两个一组(单个也算作一组),共有$\frac{n+1}{2}$(或者$\frac{n}{2}+n\%2$)组;
@@ -33,7 +33,7 @@
 
 最终的结果为 $总边数-总组数+1=edge-cnt'+1$(此处$+1$表示所有组数可用$1$步完成)
 
-```
+```c++
 // Problem: D - Busy As a Bee
 // Contest: Virtual Judge - sdtbu选拔赛2
 // URL: https://vjudge.net/contest/551762#problem/D
