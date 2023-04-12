@@ -2,7 +2,7 @@
 
 ## [题解](http://acmgnyr.org/year2009/problems.shtml)
 
-## [比赛地址](https://vjudge.net/contest/550402)
+## [比赛地址](https://vjudge.net/contest/550402) 密码：acm2023
 
 ## 比赛结果
 | Rank | Team                    | Score |
