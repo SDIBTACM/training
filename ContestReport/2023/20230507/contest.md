@@ -2,7 +2,7 @@
 
 ## [比赛地址](https://vjudge.net/contest/556687)
 
-## [题解](https://zhuanlan.zhihu.com/p/356266764)
+## 题解
 
 
 ### A
