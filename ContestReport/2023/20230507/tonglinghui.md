@@ -299,4 +299,72 @@ int main()
 }
 ```
 
-   
+B:
+
+**题意**: B进制数最多使某一位减小使得新数可以整除b+1，不能减输出-1，不用减输出0，否则输出减小的位的下标和减小后的新位。
+
+**思路**:利用同余逆元，扩展欧几里德进行计算。给定一个B进制数，可以算出这个数为了整除B+1减去最小的数是几，根据同余的性质，n ≡ m (mod b + 1) ⟺ n − m ≡ 0 (mod b + 1)。
+利用同余逆元的性质可以找到这个数最大减去几可以被B+1整除，c<sub>i</sub> (c<sub>i</sub>为新数) < a<sub>i</sub> (a<sub>i</sub>为原数) 且 (a<sub>i</sub> − c<sub>i</sub>) × b<sup>i</sup> ≡ m (mod b+1)，i从高位开始找。就能找出a<sub>i</sub> − c<sub>i</sub>，再判断a<sub>i</sub> − c<sub>i</sub>是否小于a<sub>i</sub>。
+
+```c++
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+#include <vector>
+#include <queue>
+#define ll long long 
+using namespace std;
+ll arr[200000];
+ll sum[200000];//实际只取sum[n]=m
+ll invv[200000];//b^i的逆元
+
+ll exgcd(ll a, ll b, ll& x, ll& y) {
+	if (b == 0) {
+		x = 1, y = 0;
+		return a;
+	}
+	ll d = exgcd(b, a % b, x, y);
+	ll temp = x;
+	x = y;
+	y = temp - a / b * y;
+	return d;
+}
+
+ll inv(ll a, ll p) {//求逆元
+	ll x, y;
+	if (exgcd(a, p, x, y) != 1)//无解
+		return -1;
+	return (x % p + p) % p;
+}
+
+signed main() {
+	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+	ll b, a;
+	cin >> b >> a;
+	for (ll i = 0; i < a; i++) {
+		cin >> arr[i];
+	}
+	reverse(arr, arr + a);
+	ll w = 1;
+	for (ll i = 1; i <= a; i++) {
+		sum[i] = (sum[i - 1] + (arr[i - 1] * w)) % (b + 1);
+		invv[i - 1] = inv(w, b + 1);//这里算的是 w*x ≡ 1 (mod b + 1)这里的w不是最终数据
+		w = w * b % (b + 1);//防止数过溢出
+	}
+	ll m = sum[a];
+	if (m == 0) {
+		cout << "0 0" << endl;
+		return 0;
+	}
+	for (ll i = 0; i < a; i++) {
+		ll k = m * invv[a - i - 1] % (b + 1);//将数据转换为w*x ≡ m (mod b + 1)中的w
+		if (k <= arr[a - i - 1]) {
+			cout << i + 1 << " " << arr[a - i - 1] - k << endl;  
+			return 0;
+		}
+	}
+	cout << "-1 -1" << endl;
+	//cout << a % b << endl;
+	return 0;
+}
+```
