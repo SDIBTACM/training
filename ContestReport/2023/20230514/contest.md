@@ -1,5 +1,6 @@
 # 20、21、22第二次组队赛(2023.05.14 13:00-18:00)
 ## [比赛地址](https://vjudge.net/contest/557451)
+## [题解](https://blog.csdn.net/nidhs/article/details/125705997)
 ## 比赛排名
 | Rank | Team | Score |
 | ---- | ---- | ----- |
