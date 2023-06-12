@@ -5,7 +5,7 @@
 A Divisibility by 2^n
 
 判断一个数组的乘积能否被2整除，可以进行操作：将数组中的每个数a[i]对应乘i，然后再去判断能否被2整除，输出操作数。此题我通过计算2的个数来判断能否被整除，先找出输入数组中2的个数，再找输入数组的个数1~n中2的个数，然后通过与n中2的个数相比，来计算所需的操作数。
-~~~
+```
 #include<iostream>
 #include<algorithm>
 #include<cmath>
@@ -73,12 +73,12 @@ int main()
     }
     return 0;
 }
-~~~
+```
 
 B Swap Game
 
 本题为博弈问题，当a[1]为0的时候那个人输掉比赛。先把a[2]及以后的数从小到大排序，即a[2]为最小的数，让a[1]与a[2]相比，如果a[1]<=a[2]，则Bob胜利，反之，Alice胜利。
-~~~
+```
 #include<iostream>
 #include<algorithm>
 using namespace std;
@@ -110,7 +110,7 @@ int main()
     }
     return 0;
 }
-~~~
+```
 
 ## 下周
 本周由于时间比较紧，没来得及做dp算法练习，下周会尽力多做算法题目训练，加强算法练习，同时多做每日一题，不会的及时补。
