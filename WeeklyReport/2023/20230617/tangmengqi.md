@@ -18,7 +18,7 @@ inline int cc(int m,int n) {
 ```
 顺便也发现了一个定理：
 Lucas 定理内容如下：对于质数 p有
-$C_n^m\%p = C_{n/p}^{m/p}C_{n\%p}^{m\%p}\%p$
+$C_n^m\% p = C_{n/p}^{m/p}C_{n\% p}^{m\% p}\% p$
 ```c++
 int Lucas(int n,int m)
 {
