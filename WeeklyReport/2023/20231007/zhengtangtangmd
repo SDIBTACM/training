@@ -1,0 +1,378 @@
+## 本周感想
+一回到家消费降级，一下子敢花钱了，原本想烫个头去见见人的，后来见不上了突然就不知道自己烫头的意义是什么了。
+家里那个汉堡，挺奇怪的。我姑买给我吃的时候超级好吃，从来没吃过这么好吃的汉堡。我第二天下午就去那店里买了两个吃了，又变得一点不好吃了。
+在家里忙的事情比较碎，比较想说的是助教培训真是压榨我的自由，我的假期还要压榨。
+别的按照优先级来排一下：1.陪伴家人，我是真的相家了。2。好好休息调整调整，freedom，和朋友聊天玩耍感受一下走过的路。3.琐碎业务，跟着算法宝典练习紫书题目，国励表，讲读比赛的读书报告，ppt，知识竞赛准备。
+还有奋斗的理由：1.一回到家看到那爷爷奶奶住的穷破老年房，我在想都这样了以后不全都得靠我来。
+2.我来的时候坐火车来的，就在我们县城那里出发，全家人大半夜11点多的都来送我去车站，我爷爷最后还在围栏去看着我检票过去。真的，那感觉哭死，以后一定带他们出来看看外面的时间。呜呜~（找不到表情）
+## 训练题部分补题
+没有参加训练赛，把补了的题写一写，看着rank的情况，题目应该是简单的。跳了3道就去做每日一题去了。
+### a题 zoj3202
+一个数组，求最大数的下标和倒数第二大的数-》不粗心就好了
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;cin>>n;
+	while(n--)
+	{
+		int m;
+		int a[110];
+		cin>>m;
+		int maxx=-1,y;
+		for(int i=0;i<m;i++)
+		{cin>>a[i];if(a[i]>maxx){y=i+1;maxx=a[i];}}//////////细心点注意别把max=a[i]  漏了就行。
+		
+		sort(a,a+m);
+		int x=a[m-1-1];
+	//	int y=maxx;
+		cout<<y<<" "<<x<<endl;
+	}
+    return 0;
+}
+```
+### F zoj3207
+给一些字符串数组，然后计算给定字符串数组中每个字符串出现的次数，最后加和。直接map
+```
+#include <bits/stdc++.h>
+using namespace std;
+map<string,int> mp;
+/*
+4
+Saint_Seiya
+YoYo_ball
+Super_Mario
+HuLuWa
+3
+2 Saint_Seiya TiaoFangZi
+1 KTV
+3 HuLuWa YOYO_BALL YoYo_ball*/
+/*
+1
+0
+2
+*/
+int main(){
+   int n;cin>>n;
+   while(n--){string s;cin>>s;mp[s]++;}
+   int m;cin>>m;while(m--){
+	int sum=0;
+   int num;cin>>num;
+   while(num--){string s;cin>>s;sum+=mp[s];}
+   cout<<sum<<endl;
+   }
+    return 0;
+}```
+### I题 zoj3210
+判断给定数组满足stack和queue的结构特点，直接做个stack和queue模拟判断就行
+```
+#include <bits/stdc++.h>
+using namespace std;
+/*
+4
+3
+1 2 3
+3 2 1
+3
+1 2 3
+1 2 3
+3
+1 2 1
+1 2 1
+3
+1 2 3
+2 3 1*/
+/*
+stack
+queue
+both
+neither*/
+int main(){
+   int n;cin>>n;
+   while(n--)
+   {
+      
+      int m,a[110],b[110];stack<int>s;queue<int>q;
+      cin>>m;
+      for(int i=0;i<m;i++)
+      {
+         cin>>a[i];
+         s.push(a[i]);
+         q.push(a[i]);
+        
+      }
+      for(int i=0;i<m;i++)
+      cin>>b[i];
+      int flags=1,flagq=1;
+      for(int i=0;i<m;i++)
+      {
+         if(b[i]!=q.front())
+         flagq=0;
+         q.pop();
+      }
+      for(int i=0;i<m;i++)
+      {
+         if(b[i]!=s.top())
+         flags=0;
+         s.pop();
+         //printf("%d ",flags);
+      }
+      if(flags&&flagq)cout<<"both"<<endl;
+      else if(flags)cout<<"stack"<<endl;
+      else if(flagq)cout<<"queue"<<endl;
+      else cout<<"neither"<<endl;
+   }
+   return 0;
+}
+```
+## 每日一题部分（ 这部分是想写的，上面那是xing'szy）
+1.cf-855B
+给三个数p，q，r和一个数组，计算乘积和的最大值，maxx=max（p*a [i]+q*a[j]+r*a[k],要求i<=k<=j;)
+//自己脑子里首先想到的是暴力，肯定超时了，在想dp，列不出来状态方程，寄了。
+//一个新的思路，先把左值最大值和右值最大值列表dp出来，最后在遍历一遍中值。需要注意的是左值需要从左向右dp，右值反之。以后还要学习进行黑盒化处理。
+```
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int maxn=1e5+10;
+map<string,int> mp;
+/*
+5 1 2 3
+1 2 3 4 5
+*/
+/*
+30
+*/
+/*
+5 1 2 -3
+-1 -2 -3 -4 -5
+*/
+/*
+12
+*/
+ll dp[maxn],dp1[maxn],a[maxn];
+void print(int a[1],int n)
+{
+   for(int i=0;i<n;i++)
+   printf("%lld ",a[i]);
+   putchar('\n');
+}
+int main(){
+   
+   //int a[5]={-1,-2,-3,-4,5},p=1,q=2,r=-3,n=5;
+   int n,p,q,r;cin>>n>>p>>q>>r;
+   for(ll i=0;i<n;i++)cin>>a[i];
+   dp[0]=p*a[0];
+   for(int i=1;i<n;i++)
+   {
+      dp[i]=max(dp[i-1],p*a[i]);
+   }
+   dp1[n-1]=r*a[n-1];
+   for(ll i=n-1-1;i>=0;i--)//4.  n-1  -  0
+   {
+     dp1[i]=max(dp1[i+1],r*a[i]);//3.dp
+   }
+   //print(dp,n);
+   //print(dp1,n);
+   //long long ans=dp[0]+dp1[0]+a[0]*q;
+   long long ans=-4e18;//2.这里要设很小很小，防止题目出现比较小的数误判，
+   for(ll i=0;i<n;i++)
+   {
+      long long x=dp[i]+dp1[i]+a[i]*q;//1.要用long long ，int会溢出。
+      
+      ans=max(ans,x);
+   }
+   cout<<ans<<endl;
+    return 0;
+}
+```
+2.cf 853A
+这题有点水，说实话不是很懂就交上去了。
+给一个开始时间k和一个数组a，求最小延机费用和飞机出行顺序。
+存入一个以first（花费）从大到小排序的优先队列，依次吐出来，就是最佳排序方法。
+疑问点是：如果有一个first大，但是出发时间比预设的小，他会不会出问题。
+```
+#include <iostream>
+#include <cstdio>
+#include <algorithm>
+#include <cstring>
+#include <utility>
+#include <queue>
+typedef long long ll;
+using namespace std;
+const int maxn = 3e5+19;
+
+struct node{
+    int first, second;
+    bool operator < (const node &temp)const{
+        return first < temp.first;
+    }
+};
+int pos[maxn];
+
+int main(){
+#ifdef TEST
+freopen("test.txt", "r", stdin);
+#endif // TEST
+
+    ll k, n;
+    while(cin >> n >> k){
+        priority_queue<node> Q;
+        ll sum = 0;
+        for(ll i = 1; i <= n+k; i++){
+            int a;
+            if(i <= n){
+                scanf("%d", &a);
+                Q.push(node{a, i});
+            }
+            if(i >= k+1){
+                node tNode = Q.top();
+                Q.pop();
+                sum += (i-tNode.second)*tNode.first; // 作为循环变量的i为long long，故不需显式类型转换了。
+                pos[tNode.second] = i;
+            }
+        }
+        printf("%lld\n", sum);
+        for(int i = 1 ;i <= n; i++){
+            printf("%d%c", pos[i], " \n"[i==n]);
+        }
+    }
+
+    return 0;
+}
+```
+3.cf 847A  // 时间过了，没补上去。
+双向链表的连接。非常适合黑盒化的一道题，双数组，左右值。
+```
+#include <bits/stdc++.h>
+#define rep(i, n) for (int i = 1; i <= (n); ++i)
+#define debug(c) cout << #c << " = " << c << endl;
+using namespace std;
+typedef long long ll;
+int a[110],b[110];
+/*
+7
+4 7
+5 0
+0 0
+6 1
+0 2
+0 4
+1 0
+/*
+4 7
+5 6
+0 5
+6 1
+3 2
+2 4
+1 0
+*/
+
+int main(void)
+{
+    int n;cin>>n;
+    for(int i=1;i<=n;i++){cin>>a[i]>>b[i];}
+    int k=0;
+    for(int i=1;i<=n;i++)
+    {
+
+        if(!a[i])
+        {
+            a[i]=k;
+            b[k]=i;
+            k=i;
+while(b[k])
+        {
+
+            k=b[k];
+        }
+        }
+
+    }
+    for(int i=1;i<=n;i++)
+        cout<<a[i]<<" "<<b[i]<<endl;
+	return 0;
+}
+```
+4.求最长上升序列，dp+特判（a[j]>=a[i])双重循环解决问题）
+```
+#include <bits/stdc++.h>
+#define rep(i, n) for (int i = 1; i <= (n); ++i)
+#define debug(c) cout << #c << " = " << c << endl;
+using namespace std;
+typedef long long ll;
+const int maxn =1e5+10;
+/*
+4    (1-100)
+1 1 0 1    0 | 1
+/*
+3
+*/
+int main(void)
+{
+    int a[110];
+	int n;cin>>n;
+	for(int i=1;i<=n;i++)cin>>a[i];
+	int dp[110];
+	for(int i=1;i<=n;i++)
+    {
+
+        dp[i]=1;//1.初始值注意设为1；
+        for(int j=1;j<i;j++)
+        {
+
+            if(a[i]>=a[j])
+                dp[i]=max(dp[j]+1,dp[i]);
+        }
+    }
+    int ans=0;for(int i=1;i<=n;i++)ans=max(ans,dp[i]);
+    cout<<ans<<endl;
+	return 0;
+}
+```
+f.cf 839C
+图论求起点1到各末点的期望（平均）长度
+记录出度cnt，递归更新每个点的概率，最后会递归到根节点，dfs递归更新即可。
+```
+#include <bits/stdc++.h>
+#define rep(i, n) for (int i = 1; i <= (n); ++i)
+#define debug(c) cout << #c << " = " << c << endl;
+using namespace std;
+typedef long long ll;
+const int INF = 0x3f3f3f3f;
+const int mod = 1e9 + 7;
+const int N = 1e5 + 10;
+int n, m;
+int vis[N];
+vector<int>e[N];
+double f[N]; //表示在第i节点还要走的期望长度
+void dfs(int u,int fa) {
+int cnt=0;
+    if(vis[u])
+        return;
+	for(auto it: e[u])
+	{
+	    if(it==fa)continue;//1.到达末点的标志
+		dfs(it,u);
+		f[u]+=f[it]+1.0;
+		cnt++;
+	}
+	if(cnt)f[u]=(double)f[u]/cnt;
+}
+int main(void)   //概率dp求期望
+{
+	int n;cin>>n;
+	for(int i=1;i<=n-1;i++){
+		int x,y;cin>>x>>y;
+		e[x].push_back(y);e[y].push_back(x);
+	}
+	dfs(1,-1);
+	printf("%.15f",f[1]);
+
+	return 0;
+}
+```
+每日一题给的启示和收获不小，理解完题解就能一下子敲出来了，
