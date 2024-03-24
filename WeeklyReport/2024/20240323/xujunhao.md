@@ -7,7 +7,8 @@
 ≤ 14，都不存在 (a, b) 满足题目中的条件。当 X = 15 时，(a, b) = (2, 1) 满足条件。输入和输出可能不适合存储在32位整数类型中。
 ### F题的翻译：
 Monocarp 有一棵树，这棵树由 n 个顶点组成，并且以顶点 1 为根。他决定研究广度优先搜索（BFS），所以他从根开始，对这棵树执行了 BFS。BFS 可以通过以下伪代码来描述：
-```a = [] # the order in which vertices were processed
+```
+a = [] # the order in which vertices were processed
 q = Queue()
 q.put(1) # place the root at the end of the queue
 while not q.empty():
