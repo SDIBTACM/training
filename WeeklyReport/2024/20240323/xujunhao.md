@@ -3,16 +3,19 @@
 ## 学了点搜索，dfs，bfs，学不明白。。。。。
 ## 翻译了未作出的题目，翻译如下：
 ### E的翻译：
-给定一个整数 N，找出最小的整数 X，满足以下所有条件：1.X 大于等于 N。2.存在一对非负整数 (a, b)，使得 X = a^3 + a^2 * b + a * b^2 + b^3。约束 N是一个整数，0 ≤ N ≤ 10^18。对于任何整数 X，如果 9 ≤ X ≤ 14，都不存在 (a, b) 满足题目中的条件。当 X = 15 时，(a, b) = (2, 1) 满足条件。输入和输出可能不适合存储在32位整数类型中。
+给定一个整数 N，找出最小的整数 X，满足以下所有条件：1.X 大于等于 N。2.存在一对非负整数 (a, b)，使得 X = a^3 + a^2 * b + a * b^2 + b^3。约束 N是一个整数，0 ≤ N ≤ 10^18。对于任何整数 X，如果 9 ≤ X 
+≤ 14，都不存在 (a, b) 满足题目中的条件。当 X = 15 时，(a, b) = (2, 1) 满足条件。输入和输出可能不适合存储在32位整数类型中。
 ### F题的翻译：
-Monocarp 有一棵树，这棵树由 n 个顶点组成，并且以顶点 1 为根。他决定研究广度优先搜索（BFS），所以他从根开始，对这棵树执行了 BFS。BFS 可以通过以下伪代码来描述：a = [] # the order in which vertices were processed
+Monocarp 有一棵树，这棵树由 n 个顶点组成，并且以顶点 1 为根。他决定研究广度优先搜索（BFS），所以他从根开始，对这棵树执行了 BFS。BFS 可以通过以下伪代码来描述：
+```a = [] # the order in which vertices were processed
 q = Queue()
 q.put(1) # place the root at the end of the queue
 while not q.empty():
-   k = q.pop() # retrieve the first vertex from the queue
+    k = q.pop() # retrieve the first vertex from the queue
     a.append(k) # append k to the end of the sequence in which vertices were visited
     for y in g[k]: # g[k] is the list of all children of vertex k, sorted in ascending order
         q.put(y)
+```
 Monocarp 对 BFS 非常着迷，以至于最终他失去了这棵树。幸运的是，他仍然有一个顶点序列，BFS 算法（伪代码中的数组 a）访问顶点的顺序。Monocarp 知道每个顶点只被访问过一次（因为它们被放置和从队列中取出恰好一次）。此外，他知道每个顶点的所有子项都是按升序查看的。Monocarp 对 BFS 如此着迷，以至于最后他弄丢了自己的树。幸运的是，他仍保留了一个顶点序列，这个序列是按照 BFS 算法访问顶点的顺序（即伪代码中的数组 a）。Monocarp 知道每个顶点只被访问了一次（因为它们只被放入和从队列中取出了一次）。
 同时，他也知道每个顶点的所有子节点都是按升序被访问的。
 Monocarp 明白，通常会有许多树（在一般情况下）具有相同的访问顺序a，因此他不指望能恢复自己的树。Monocarp 对任何具有最小高度的树都感到满意。
@@ -38,13 +41,7 @@ Monocarp 明白，通常会有许多树（在一般情况下）具有相同的�
 对于每个正整数 l（其中 1 ≤ l ≤ d），坐标 (i-l, j+l) 不被白方兵占据。
 对于每个正整数 d，它可以满足以下条件时移动到 (i-d, j-d)：
 坐标 (i-d, j-d) 在棋盘范围内。
-对于每个正整数 l（其中 1 ≤ l ≤ d），坐标 (i-l, j-l) 不被白方兵占据。输入是从标准输入中按照以下格式给出的：
-N
-A_x A_y
-B_x B_y
-S_1
-S_2
-S_N
+对于每个正整数 l（其中 1 ≤ l ≤ d），坐标 (i-l, j-l) 不被白方兵占据。
 其中：N 表示白色兵的数量。
 A_x A_y 表示白色象的初始位置坐标 (A_x, A_y)。
 B_x B_y 表示目标位置坐标 (B_x, B_y)，象需要移动到这里。
