@@ -6,3 +6,14 @@
 + 周赛的解题报告放到ContestReport对应的目录中。
 + 一般认为周六是每周的最后一天。
 + 每次提交前请先执行 `git pull`。
+
+
+
+# 周报 PR 提交流程
+1. 使用 `git clone` 到本地.
+2. 首先使用 `git pull --rebase` 拉取最新仓库内容. (切记使用 rebase)
+3. 使用 `git checkout -b 你分支的名字, 如: jk192/fyj-weekly-report` 新建一个 git 分支. 
+4. 对当前分支新增内容 (你写的周报) 进行提交
+5. 使用 `git push orign` 提交到本远程仓库
+6. 在 github 提交 PR, 将你自己的周报分支, 如: `jk192-fyj-weekly-report` 分支创建合并进 master 的 PR, 等待合并即可.
+7. 备注: 如果对 git 命令不熟悉, 可以使用 [soureTree](https://www.sourcetreeapp.com/) 进行 git 分支的管理
